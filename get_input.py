@@ -9,3 +9,12 @@ def get_input(day, folder="input"):
 
 def get_sample_input(day):
     return get_input(day, folder="sample_input")
+
+def sample_as_lines(day):
+    data = get_input(day, folder="sample_input")
+    return [x for x in data.splitlines()]
+
+def data_as_lines(day):
+    data = get_input(day)
+    return [x for x in data.splitlines()]
+
