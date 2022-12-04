@@ -3,8 +3,9 @@ from get_input import *
 DAY = 4
 
 def pairs_to_sets(line):
-    a_range = [int(x) for x in line.split(",")[0].split("-")]
-    b_range = [int(x) for x in line.split(",")[1].split("-")]
+    parts = line.split(",")
+    a_range = [int(x) for x in parts[0].split("-")]
+    b_range = [int(x) for x in parts[1].split("-")]
     a = {x for x in range(a_range[0], a_range[1] + 1)}
     b = {x for x in range(b_range[0], b_range[1] + 1)}
     return a, b
